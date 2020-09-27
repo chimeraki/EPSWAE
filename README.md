@@ -3,6 +3,8 @@ Encoded Prior Sliced Wasserstein AutoEncoder
 
 This work learns a latent representation (through a prior) that encodes the data manifold using a nonlinear sliced wasserstein distance in the loss and a prior-encoder network. It also introduces a network-geodesic algorithm to interpolate along 'network-geodesics', i.e., curves on the manifold instead of using the less natural euclidian distance. 
 
+This is a pytorch implementation and requires pythong 3.x
+
 In order to run this follow these steps for a given dataset (MNIST/CelebA) :
 
 1. Run EPSWAE_'dataset'.py: Create folders 'results' and 'models'. This saves two models per epoch (one for the autoencoder network and one for the prior encoder network) inside the models folder and saves reconstructed images in the results folder. It also saves ClusterCenters_'dataset'_EPSWAE.txt (that saves the input to the prior-encoder network). It uses SWAE_Empirical that contains utility functions needed to compute the Sliced Wasserstein distance. 
